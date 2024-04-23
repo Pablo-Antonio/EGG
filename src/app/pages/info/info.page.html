@@ -1,0 +1,101 @@
+<app-header></app-header>
+
+<ion-content fullscreen="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>CONTACTO</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Esta app móvil ha sido diseñada y desarrollada por Addinteli. En este espacio podrás compartirnos tus dudas, solicitudes o comentarios referente al servicio E-Egg.
+      <br><br>
+      Correo de contacto: <span>store@e-egg.game</span> o puedes llamar al <span>55 8993 1510</span>.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <form [formGroup]="commentForm" (submit)="submit()">
+        <p>Correo:</p>
+        <ion-item>
+          <ion-input formControlName="email" maxlength="128"></ion-input>
+        </ion-item>
+        <p>Asunto:</p>
+        <ion-item>
+          <ion-input formControlName="subject" maxlength="32"></ion-input>
+        </ion-item>
+        <p>Escribe tu mensaje:</p>
+        <ion-item>
+          <ion-textarea formControlName="comment" maxlength="250"></ion-textarea>
+        </ion-item>
+        <ion-button type="submit" [disabled]="!commentForm.valid">Enviar</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<style>
+  ion-content {
+      --background: url(../../../assets/img/Fondoapp.png) 0 0/100% 100% no-repeat;
+  }
+
+  @font-face {
+    font-family: "comfortaa";
+    src: url("../../../assets/fonts/Comfortaa-Medium.ttf");
+  }
+
+  * {
+      font-family: "comfortaa";
+  }
+
+  ion-button {
+    --background: #5FF403;
+    --border-radius: 5px;
+    --color: #000;
+    --height: 50px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  ion-card {
+    background-color: transparent;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  ion-item {
+    --border-radius: 5px;
+    --height: 50px;
+  }
+
+  ion-card-title {
+    font-size: medium;
+    font-weight: 600;
+    color: #5FF403;
+    margin-left: -10px;
+  }
+
+  ion-card-content {
+    color: #fff;
+    font-weight: 400;
+    margin-left: -10px;
+    text-align: justify;
+    font-size: small;
+    padding-top: 0;
+  }
+
+  span {
+    color: #5FF403;
+    font-weight: 400;
+  }
+
+  p {
+    color: #fff;
+    font-weight: 400;
+    font-size: medium;
+    margin: 5px 0;
+  }
+
+</style>
+
+<app-footer></app-footer>

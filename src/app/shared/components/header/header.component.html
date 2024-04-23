@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button *ngIf="bkButton" slot="start" defaultHref="/" text=""></ion-back-button>
+    <ng-content></ng-content>
+    <ion-img *ngIf="bkButton" slot="end" class="ion-margin-end" style="width: 90px;" src="../../../../assets/img/logoEaster.png"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<style>
+
+  ion-back-button {
+    --background: transparent;
+    --color: #5FF403;
+    --height: 50px;
+    --width: 50px;
+    --border-radius: 5px;
+  }
+
+  ion-toolbar {
+    --opacity: 0;
+  }
+
+  ion-title {
+    --opacity: 1;
+    color: white;
+    font-size: small;
+  }
+
+</style>

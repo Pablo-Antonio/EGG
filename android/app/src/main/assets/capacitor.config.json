@@ -1,0 +1,23 @@
+{
+	"appId": "io.ionic.eeg",
+	"appName": "E-EGG Saldo",
+	"webDir": "www",
+	"bundledWebRuntime": false,
+	"backgroundColor": "#000",
+	"server": {
+		"cleartext": true
+	},
+	"plugins": {
+		"SplashScreen": {
+			"launchShowDuration": 3000,
+			"launchAutoHide": true,
+			"androidScaleType": "CENTER_CROP",
+			"androidSplashResourceName": "splash",
+			"splashFullScreen": false,
+			"splashImmersive": false
+		}
+	},
+	"android": {
+		"allowMixedContent": true
+	}
+}
